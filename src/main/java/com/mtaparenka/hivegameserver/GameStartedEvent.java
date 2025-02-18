@@ -1,6 +1,9 @@
 package com.mtaparenka.hivegameserver;
 
 public class GameStartedEvent extends GameEvent {
-    public GameStartedEvent(String gameId, String player1Id, String player2Id) {
+    public final GameConfig gameConfig;
+    public GameStartedEvent(String gameId, GameConfig gameConfig) {
+        super(gameId);
+        this.gameConfig = gameConfig;
     }
 }
